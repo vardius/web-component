@@ -9,6 +9,12 @@ Lightweight library providing interface for building web components.
 HOW TO USE
 ==================================================
 
+## Instaliation
+
+```bash
+npm install --save web-component
+```
+
 1. [Documentation](https://github.com/vardius/web-component/wiki)
 
 ## Basic example
