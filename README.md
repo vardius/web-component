@@ -16,7 +16,7 @@ HOW TO USE
 For example `HelloWorld` component usage in your *index.html* file
 
 ```html
-  <hello-world who="Unicorn"></hello-world>
+<hello-world who="Unicorn"></hello-world>
 ```
 
 You could setup component as follow:
