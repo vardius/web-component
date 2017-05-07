@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/web-component.svg?style=flat-square)](https://www.npmjs.com/package/web-component)
 [![npm downloads](https://img.shields.io/npm/dm/web-component.svg?style=flat-square)](https://www.npmjs.com/package/web-component)
 
-Lightweight library providing interface for building web components.
+Lightweight library providing interface for building [web components](https://www.webcomponents.org/).
 
 ## Contribution
 
