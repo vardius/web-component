@@ -6,8 +6,11 @@
 
 Lightweight library providing interface for building web components.
 
-HOW TO USE
-==================================================
+## Contribution
+
+Is *web-component* library missing something ?
+
+No problem! Simply [fork](https://github.com/vardius/web-component/network#fork-destination-box) this repository, [add middleware](https://github.com/vardius/web-component/wiki/Middleware) and create pull request.
 
 ## Instaliation
 
