@@ -1,6 +1,6 @@
 {
   "name": "web-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight library providing interface for building web components",
   "browser": "dist/web-component.js",
   "main": "lib/index.js",
@@ -47,12 +47,14 @@
   },
   "homepage": "http://rafallorenz/web-component",
   "npmName": "web-component",
-  "npmFileMap": [{
-    "basePath": "/dist/",
-    "files": [
-      "*.js"
-    ]
-  }],
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ],
   "browserify": {
     "transform": [
       "loose-envify"
