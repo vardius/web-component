@@ -90,6 +90,7 @@
     "babel-plugin-transform-es3-member-expression-literals": "^6.5.0",
     "babel-plugin-transform-es3-property-literals": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-env": "^1.4.0",
     "babel-register": "^6.3.13",
     "check-es3-syntax-cli": "^0.1.1",
     "cross-env": "^3.1.4",
