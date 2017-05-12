@@ -1,7 +1,7 @@
 export default function applyMiddleware(...middlewares) {
   return target => options => {
     const chain = middlewares.map(middleware => middleware(target))
-    compose(...chain)(options)
+    return compose(...chain)(options)
   }
 }
 

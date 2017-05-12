@@ -3,10 +3,9 @@ import setTemplate from './middleware/setTemplate'
 import setStyles from './middleware/setStyles'
 
 export default original => options => {
-  return function (...args) {
-    let constructor = original.apply(this, args);
-    let target = constructor;
-
+  const cb = original.prototype.connectedCallback;
+  original.prototype.connectedCallback = function () {
+    let target = this;
     if (options.shadowDOM === true) {
       let shadowRoot = constructor.shadowRoot;
       if (!shadowRoot) {
@@ -19,6 +18,10 @@ export default original => options => {
 
     applyMiddleware(setTemplate, setStyles)(target)(options)
 
-    return constructor;
+    if (cb) {
+      cb.call(this);
+    }
   }
+
+  return original;
 }

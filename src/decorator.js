@@ -4,8 +4,6 @@ export function WebComponent(name, options) {
   return function (target) {
     const f = createTarget(target)(options)
 
-    f.prototype = target.prototype;
-
     if (options.extends) {
       customElements.define(name, f, {
         extends: options.extends
