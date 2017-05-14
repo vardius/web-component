@@ -23,7 +23,8 @@
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/index.js -o dist/web-component.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/index.js -o dist/web-component.min.js",
     "build": "yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
-    "prepublish": "yarn run clean && yarn run lint && yarn test && yarn run build && check-es3-syntax lib/ dist/ --kill --print"
+    "prepublish": "yarn run clean && yarn run lint && yarn test && yarn run build && check-es3-syntax lib/ dist/ --kill --print",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
