@@ -40,7 +40,6 @@ import { WebComponent } from 'web-component'
 export class HelloWorld extends HTMLElement {}
 ```
 
-### Note
 If *_shadowDOM_* option is set to `true` then *_template_* and *_styles_* will be attached to [shadowRoot](https://w3c.github.io/webcomponents/spec/shadow/#concept-shadow-root). If there is no *_shadowRoot_*, it will be created with [mode](https://w3c.github.io/webcomponents/spec/shadow/#dom-shadowroot-mode) `open`.
 
 1. [Hello World Example](https://github.com/vardius/web-component/wiki/Hello-World-Example)
