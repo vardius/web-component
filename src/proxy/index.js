@@ -11,25 +11,27 @@ export default original => () => {
     return !!result.set;
   });
 
+
   const handler = {
     get(target, name) {
       if (getters.indexOf(name) != -1) {
-
         return target[name];
       }
 
-      throw new Error('Getter "' + name + '" not found');
+      return undefined;
     },
 
     set(target, name, value) {
-      if (setters.indexOf(name) != -1) {
+      const oAttr = this.observedAttributes();
+      if (oAttr.indexOf(name) > -1) {
         this.setAttribute(name, value);
-        this['_' + name] = value;
-
-        return true;
       }
 
-      throw new Error('Setter "' + name + '" not found');
+      if (setters.indexOf(name) != -1) {
+        this['_' + name] = value;
+      }
+
+      return true;
     }
   };
 

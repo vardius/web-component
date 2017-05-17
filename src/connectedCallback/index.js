@@ -18,6 +18,11 @@ export default original => options => {
 
     applyMiddleware(setTemplate, setStyles)(target)(options)
 
+    const oAttr = this.observedAttributes();
+    if (oAttr.indexOf(name) > -1) {
+      this['_' + name] = this.getAttribute(name);
+    }
+
     if (cb) {
       cb.call(this);
     }
