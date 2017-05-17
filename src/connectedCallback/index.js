@@ -1,6 +1,6 @@
-import applyMiddleware from './applyMiddleware'
-import setTemplate from './middleware/setTemplate'
-import setStyles from './middleware/setStyles'
+import applyMiddleware from './../applyMiddleware';
+import setTemplate from './setTemplate';
+import setStyles from './setStyles';
 
 export default original => options => {
   const cb = original.prototype.connectedCallback;
