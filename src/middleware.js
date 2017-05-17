@@ -1,4 +1,10 @@
-export default function applyMiddleware(...middlewares) {
+export function applyMiddleware(...middlewares) {
+  return target => {
+    return compose(...middlewares)(target)
+  }
+}
+
+export function applyOptionsMiddleware(...middlewares) {
   return target => options => {
     const chain = middlewares.map(middleware => middleware(target))
     return compose(...chain)(options)

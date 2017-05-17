@@ -1,39 +1,20 @@
-export default original => () => {
-  const names = Object.getOwnPropertyNames(original.prototype);
+export default original => {
+  const oAttr = original.observedAttributes;
 
-  const getters = names.filter((name) => {
-    const result = Object.getOwnPropertyDescriptor(original.prototype, name);
-    return !!result.get;
-  });
+  if (oAttr && oAttr.indexOf(name) > -1) {
+    oAttr.forEach(name => {
+      Object.defineProperty(original.prototype, '_' + name, {
+        get: function () {
+          return this.attributes['_' + name];
+        },
+        set: function (value) {
+          this.setAttribute(name, value);
+        },
+        configurable: true,
+        writable: true
+      });
+    });
+  }
 
-  const setters = names.filter((name) => {
-    const result = Object.getOwnPropertyDescriptor(original.prototype, name);
-    return !!result.set;
-  });
-
-
-  const handler = {
-    get(target, name) {
-      if (getters.indexOf(name) != -1) {
-        return target[name];
-      }
-
-      return undefined;
-    },
-
-    set(target, name, value) {
-      const oAttr = this.observedAttributes();
-      if (oAttr.indexOf(name) > -1) {
-        this.setAttribute(name, value);
-      }
-
-      if (setters.indexOf(name) != -1) {
-        this['_' + name] = value;
-      }
-
-      return true;
-    }
-  };
-
-  return new Proxy(original, handler);
+  return original;
 }

@@ -1,11 +1,15 @@
-import applyMiddleware from './applyMiddleware'
+import { applyMiddleware } from './middleware'
 import connectedCallback from './connectedCallback';
 import attributeChangedCallback from './attributeChangedCallback';
 import proxy from './proxy';
 
 export function WebComponent(name, options) {
   return function (target) {
-    target = applyMiddleware(connectedCallback, proxy, attributeChangedCallback)(target)(options)
+    target = applyMiddleware(
+      connectedCallback(options),
+      attributeChangedCallback,
+      proxy
+    )(target)
 
     if (options.extends) {
       customElements.define(name, target, {

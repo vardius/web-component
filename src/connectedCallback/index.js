@@ -1,8 +1,8 @@
-import applyMiddleware from './../applyMiddleware';
+import { applyOptionsMiddleware } from './../middleware';
 import setTemplate from './setTemplate';
 import setStyles from './setStyles';
 
-export default original => options => {
+export default options => original => {
   const cb = original.prototype.connectedCallback;
   original.prototype.connectedCallback = function () {
     let target = this;
@@ -16,10 +16,10 @@ export default original => options => {
       target = shadowRoot
     }
 
-    applyMiddleware(setTemplate, setStyles)(target)(options)
+    applyOptionsMiddleware(setTemplate, setStyles)(target)(options)
 
-    const oAttr = this.observedAttributes();
-    if (oAttr.indexOf(name) > -1) {
+    const oAttr = original.observedAttributes;
+    if (oAttr && oAttr.indexOf(name) > -1) {
       this['_' + name] = this.getAttribute(name);
     }
 
