@@ -5,7 +5,7 @@ export default original => {
     oAttr.forEach(name => {
       Object.defineProperty(original.prototype, name, {
         get: function () {
-          return this[name];
+          return this['_' + name];
         },
         set: function (value) {
           this.setAttribute(name, value);
