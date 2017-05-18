@@ -1,17 +1,16 @@
 export default original => {
   const oAttr = original.observedAttributes;
 
-  if (oAttr && oAttr.indexOf(name) > -1) {
+  if (oAttr) {
     oAttr.forEach(name => {
-      Object.defineProperty(original.prototype, '_' + name, {
+      Object.defineProperty(original.prototype, name, {
         get: function () {
-          return this.attributes['_' + name];
+          return this[name];
         },
         set: function (value) {
           this.setAttribute(name, value);
         },
-        configurable: true,
-        writable: true
+        configurable: true
       });
     });
   }
