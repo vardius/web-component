@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/gh/vardius/web-component/branch/master/graph/badge.svg)](https://codecov.io/gh/vardius/web-component)
 [![npm version](https://img.shields.io/npm/v/web-component.svg)](https://www.npmjs.com/package/web-component)
 [![npm downloads](https://img.shields.io/npm/dm/web-component.svg)](https://www.npmjs.com/package/web-component)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
 
 Lightweight library providing interface for building [web components](https://www.webcomponents.org/).
 
