@@ -10,7 +10,8 @@ export default original => {
         set: function (value) {
           this.setAttribute(name, value);
         },
-        configurable: true
+        configurable: true,
+        enumerable: true
       });
     });
   }

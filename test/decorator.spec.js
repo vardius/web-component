@@ -1,9 +1,31 @@
-import { WebComponent } from './../src';
+import {
+  WebComponent
+} from './../src';
 
-class TestComponent extends HTMLElement {
+//extends HTMLElement
+class TestComponent {
   constructor() {
-    super();
-    }
+    // super();
+
+    this.attribute = false;
+    this.connected = false;
+  }
+
+  static get observedAttributes() {
+    return ['name'];
+  }
+
+  attributeChangedCallback() {
+    this.attribute = true;
+  }
+
+  connectedCallback() {
+    this.connected = true;
+  }
+
+  setAttribute(name, value) {
+    this.attributeChangedCallback(name, 'old', value);
+  }
 }
 
 window.customElements = {
@@ -14,8 +36,16 @@ window.customElements = {
 
 describe('Decorator', () => {
   it('creates component', () => {
-    const component = WebComponent('test-component')(TestComponent);
-    expect(component).toBeDefined();
+    const DecoratedClass = WebComponent('test-component')(TestComponent);
+    expect(DecoratedClass).toBeDefined();
+
+    let component = new TestComponent();
+    component.name = 'test';
+    expect(component.name).toEqual('test');
+    expect(component.attribute).toEqual(true);
+
+    component.connectedCallback();
+    expect(component.connected).toEqual(true);
 
     const expected = customElements.get('test-component');
     expect(expected).toBeDefined();

@@ -1,4 +1,6 @@
-import { applyMiddleware } from './../src/middleware';
+import {
+  applyMiddleware
+} from './../src/middleware';
 
 function thunk(original) {
   original.id = 'done';
@@ -10,7 +12,9 @@ describe('Middleware', () => {
     const spy = jest.fn();
     spy(thunk);
 
-    const target = applyMiddleware(thunk)({ id: 'test' });
+    const target = applyMiddleware(thunk)({
+      id: 'test'
+    });
 
     expect(spy.mock.calls.length).toEqual(1)
     expect(target.id).toEqual('done')
