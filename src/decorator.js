@@ -1,9 +1,9 @@
-import { applyMiddleware } from './middleware'
+import { applyMiddleware } from './middleware';
 import connectedCallback from './connectedCallback';
 import attributeChangedCallback from './attributeChangedCallback';
 import proxy from './proxy';
 
-export function WebComponent(name, options) {
+export function WebComponent(name, options = {}) {
   return function (target) {
     target = applyMiddleware(
       connectedCallback(options),
