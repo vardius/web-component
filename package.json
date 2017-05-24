@@ -25,7 +25,7 @@
     "build": "yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
     "prepare": "yarn run build",
     "prebuild": "yarn run clean",
-    "posttest": "yarn run typecheck && yarn run lint",
+    "posttest": "yarn run lint",
     "preversion": "yarn test",
     "postversion": "git push && git push --tags"
   },
