@@ -11,7 +11,7 @@ export default original => {
     }
 
     if (ac) {
-      ac.call(this);
+      ac.call(this, name, oldValue, newValue);
     }
   };
 
