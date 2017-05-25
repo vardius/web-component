@@ -7,9 +7,9 @@ export default options => original => {
   original.prototype.connectedCallback = function() {
     let target = this;
     if (options.shadowDOM === true) {
-      let shadowRoot = constructor.shadowRoot;
+      let shadowRoot = target.shadowRoot;
       if (!shadowRoot) {
-        shadowRoot = constructor.attachShadow({
+        shadowRoot = target.attachShadow({
           mode: "open"
         });
       }
