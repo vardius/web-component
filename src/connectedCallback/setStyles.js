@@ -4,14 +4,14 @@ export default target => options => {
     target.appendChild(styles);
   }
 
-  return options
-}
+  return options;
+};
 
 function createStyles(styles) {
   if (!styles) {
-    return null
+    return null;
   }
-  let s = document.createElement('style');
+  let s = document.createElement("style");
   s.textContent = styles;
 
   return s;

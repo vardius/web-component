@@ -4,16 +4,16 @@ export default target => options => {
     target.appendChild(template);
   }
 
-  return options
-}
+  return options;
+};
 
 function createTemplate(template) {
   if (!template) {
-    return null
+    return null;
   }
 
-  let t = document.createElement('template');
+  let t = document.createElement("template");
   t.innerHTML = template;
 
-  return t.content.cloneNode(true)
+  return t.content.cloneNode(true);
 }

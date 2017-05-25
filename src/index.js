@@ -1,1 +1,1 @@
-export {WebComponent} from './decorator';
+export { WebComponent } from "./decorator";

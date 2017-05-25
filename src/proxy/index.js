@@ -4,10 +4,10 @@ export default original => {
   if (oAttr) {
     oAttr.forEach(name => {
       Object.defineProperty(original.prototype, name, {
-        get: function () {
-          return this['_' + name];
+        get: function() {
+          return this["_" + name];
         },
-        set: function (value) {
+        set: function(value) {
           this.setAttribute(name, value);
         },
         configurable: true,
@@ -17,4 +17,4 @@ export default original => {
   }
 
   return original;
-}
+};

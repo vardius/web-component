@@ -1,15 +1,15 @@
-import { applyMiddleware } from './middleware';
-import connectedCallback from './connectedCallback';
-import attributeChangedCallback from './attributeChangedCallback';
-import proxy from './proxy';
+import { applyMiddleware } from "./middleware";
+import connectedCallback from "./connectedCallback";
+import attributeChangedCallback from "./attributeChangedCallback";
+import proxy from "./proxy";
 
 export function WebComponent(name, options = {}) {
-  return function (target) {
+  return function(target) {
     target = applyMiddleware(
       connectedCallback(options),
       attributeChangedCallback,
       proxy
-    )(target)
+    )(target);
 
     if (options.extends) {
       customElements.define(name, target, {
@@ -20,5 +20,5 @@ export function WebComponent(name, options = {}) {
     }
 
     return target;
-  }
+  };
 }
