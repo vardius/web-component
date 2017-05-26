@@ -1,6 +1,6 @@
 {
   "name": "web-component",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Lightweight library providing interface for building web components",
   "browser": "dist/web-component.js",
   "main": "lib/index.js",
