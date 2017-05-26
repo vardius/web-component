@@ -11,14 +11,8 @@ export function WebComponent(name, options = {}) {
       proxy
     )(target);
 
-    if (options.extends) {
-      customElements.define(name, target, {
-        extends: options.extends
-      });
-    } else {
-      customElements.define(name, target);
-    }
-
-    return target;
+    return customElements.define(name, target, {
+      extends: options.extends
+    });
   };
 }
