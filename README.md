@@ -5,13 +5,9 @@
 [![npm version](https://img.shields.io/npm/v/web-component.svg)](https://www.npmjs.com/package/web-component)
 [![npm downloads](https://img.shields.io/npm/dm/web-component.svg)](https://www.npmjs.com/package/web-component)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
+[![Beerpay](https://beerpay.io/vardius/web-component/badge.svg?style=beer-square)](https://beerpay.io/vardius/web-component) [![Beerpay](https://beerpay.io/vardius/web-component/make-wish.svg?style=flat-square)](https://beerpay.io/vardius/web-component?focus=wish)
 
 Lightweight library providing interface for building [web components](https://www.webcomponents.org/).
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/vardius/web-component/badge.svg?style=beer-square)](https://beerpay.io/vardius/web-component)  [![Beerpay](https://beerpay.io/vardius/web-component/make-wish.svg?style=flat-square)](https://beerpay.io/vardius/web-component?focus=wish)
 
 ## Contribution
 
