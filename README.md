@@ -8,6 +8,11 @@
 
 Lightweight library providing interface for building [web components](https://www.webcomponents.org/).
 
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/vardius/web-component/badge.svg?style=beer-square)](https://beerpay.io/vardius/web-component)  [![Beerpay](https://beerpay.io/vardius/web-component/make-wish.svg?style=flat-square)](https://beerpay.io/vardius/web-component?focus=wish)
+
 ## Contribution
 
 Is *web-component* library missing something ?
@@ -50,8 +55,3 @@ If *_shadowDOM_* option is set to `true` then *_template_* and *_styles_* will b
 ## License
 
 The code is available under the [MIT license](LICENSE.md).
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/vardius/web-component/badge.svg?style=beer-square)](https://beerpay.io/vardius/web-component)  [![Beerpay](https://beerpay.io/vardius/web-component/make-wish.svg?style=flat-square)](https://beerpay.io/vardius/web-component?focus=wish)
