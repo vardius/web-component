@@ -17,11 +17,6 @@
           "loose": true
         }]
       ]
-    },
-    "es": {
-      "plugins": [
-        "./bin/use-lodash-es"
-      ]
     }
   }
 }
