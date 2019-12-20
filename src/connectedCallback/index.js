@@ -10,7 +10,7 @@ export default options => original => {
       let shadowRoot = target.shadowRoot;
       if (!shadowRoot) {
         shadowRoot = target.attachShadow({
-          mode: "open"
+          mode: options.mode ? options.mode : "open"
         });
       }
       target = shadowRoot;
