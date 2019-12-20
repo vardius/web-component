@@ -14,7 +14,7 @@ Is *web-component* library missing something ?
 
 No problem! Simply [fork](https://github.com/vardius/web-component/network#fork-destination-box) this repository, [add middleware](https://github.com/vardius/web-component/wiki/Middleware) and create pull request.
 
-## Instaliation
+## Installation
 
 ```bash
 npm install --save web-component
@@ -37,7 +37,8 @@ import { WebComponent } from 'web-component'
   template: require('./hello-world.html'),// provide template
   styles: require('./hello-world.css'), //provide styles
   extends: 'button', //default does not extends any
-  shadowDOM: true //default false
+  shadowDOM: true, //default false
+  mode: "open" // default open, set to closed to block access to shadowDOM
 })
 export class HelloWorld extends HTMLElement {}
 ```
